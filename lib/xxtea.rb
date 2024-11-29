@@ -13,7 +13,7 @@
 #                                                          #
 ############################################################
 
-if File.exists?(File.join(File.dirname(__FILE__), 'xxtea.' + (RUBY_PLATFORM=~/darwin/ ? 'dylib' : RUBY_PLATFORM=~/win32|w32/ ? 'dll' : 'so'))) then
+if File.exist?(File.join(File.dirname(__FILE__), 'xxtea.' + (RUBY_PLATFORM=~/darwin/ ? 'dylib' : RUBY_PLATFORM=~/win32|w32/ ? 'dll' : 'so'))) then
   if !defined?(JRUBY_VERSION) then
     require "xxtea/xxtea"
   else
